@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border: 2px solid rgb(68, 28, 201);"></canvas>
+
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var c =canvas.getContext( "2d");
+    c.fillStyle = "red";
+    c.fillRect(10, 0, 100, 100);
+    c.beginPath();
+    c.arc(270, 175, 80, 0, 2 * Math.PI);
+    c.strokeStyle="green";
+    c.stroke();
+    c.beginPath();
+    c.moveTo(400,40);
+    c.lineTo(300,100);
+    c.strokeStyle="blue";
+    c.stroke();
+    c.beginPath();
+    c.font="30px arial";
+    c.fillStyle="blue";
+    c.fillText("ds",10,170);
+    c.beginPath();
+    c.font="50px arial";
+    c.strokeStyle="YELLOW";
+    c.strokeText("cs",10,250);
+    c.stroke();
+    c.beginPath();
+    c.fillStyle = "orange";
+    c.fillRect(150, 260, 90, 90);
+    c.beginPath();
+    c.font="30px arial";
+    c.strokeStyle="red";
+    c.strokeText("divya",160,310);
+    c.stroke();
+
+   
+
+</script>
+</body>
+</html>

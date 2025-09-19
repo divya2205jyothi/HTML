@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deactivation Form</title>
+</head>
+<body bgcolor="lightgrey">
+
+  <h2 align="center">Chillacts Account Deactivation Form</h2>
+
+  <form>
+    <fieldset style="width:300px; margin:auto; background-color:white;">
+      <legend><b>User Information</b></legend>
+
+      User Name:<br>
+      <input type="text" name="username"><br><br>
+
+      Email:<br>
+      <input type="email" name="email"><br><br>
+      Password:<br>
+      <input type="password" name="password"><br><br>
+    </fieldset>
+
+    <br>
+
+    <fieldset style="width:300px; margin:auto; background-color:white;">
+      <legend><b>Deactivation Details</b></legend>
+
+      Why are you deactivating your account?<br>
+      <input type="radio" name="reason" value="privacy"> Privacy concerns<br>
+      <input type="radio" name="reason" value="not_useful"> Not useful<br>
+      <input type="radio" name="reason" value="too_much_email"> Too many emails<br>
+      <input type="radio" name="reason" value="other"> Other<br><br>
+
+      Additional Comments:<br>
+      <textarea name="comments" rows="4" cols="40"></textarea><br><br>
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Deactivate Account">
+    <input type="reset" value="Reset Form">
+  </form>
+
+</body>
+</html>
