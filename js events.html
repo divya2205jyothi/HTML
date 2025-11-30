@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Events Demo</title>
+  <style>
+    h1{
+      text-align: center;
+      color: blueviolet;
+      background-color: lavender;
+    }
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body >
+  <h1>JavaScript Events </h1>
+
+  <button id="clickBtn">Click Me</button>
+  <p id="msg1"></p>
+
+
+  <p id="Text">PLACE THE CURSOR HERE</p>
+  <p id="msg2"></p>
+
+
+  <form id="myForm">
+    <label>Enter Name: <input type="text" id="name"></label>
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formMsg"></p>
+
+ 
+  <p id="winMsg"></p>
+
+  <script>
+ 
+    document.getElementById("clickBtn").addEventListener("click", function() {
+      document.getElementById("msg1").textContent = "Button Clicked!";
+    });
+
+    
+    const Text = document.getElementById("Text");
+    Text.addEventListener("mouseover", function() {
+      document.getElementById("msg2").textContent = "Mouse is over the text!";
+    });
+    Text.addEventListener("mouseout", function() {
+      document.getElementById("msg2").textContent = "Mouse left the text.";
+    });
+
+    const form = document.getElementById("myForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); 
+      document.getElementById("formMsg").textContent = "Form Submitted!";
+    });
+
+    
+
+    // Window Events
+    window.addEventListener("load", function() {
+      document.getElementById("winMsg").textContent = "Page Loaded!";
+    });
+
+    window.addEventListener("resize", function() {
+      document.getElementById("winMsg").textContent = "Window resized!";
+    });
+  </script>
+</body>
+</html>
